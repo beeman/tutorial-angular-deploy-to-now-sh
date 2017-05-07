@@ -3,6 +3,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "now-start": "serve ./dist",
+    "now-build": "./node_modules/.bin/ng build --prod --progress=false",
+    "now-deploy": "now",
+    "now-alias": "now alias",
+    "now": "npm run now-deploy && npm run now-alias",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -22,6 +27,7 @@
     "@angular/router": "^4.0.0",
     "core-js": "^2.4.1",
     "rxjs": "^5.1.0",
+    "serve": "^5.1.4",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
@@ -42,5 +48,11 @@
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",
     "typescript": "~2.2.0"
+  },
+  "now": {
+    "name": "tutorial-angular-deploy-to-now-sh",
+    "alias": [
+      "tutorial-angular-deploy-to-now-sh"
+    ]
   }
 }
