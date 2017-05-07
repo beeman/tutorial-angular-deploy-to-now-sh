@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- '7'
+
+install:
+   - npm i --silent -g now
+
+script:
+   - now deploy --token=$NOW_TOKEN
+   - now alias --token=$NOW_TOKEN
